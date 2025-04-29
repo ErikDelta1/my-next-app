@@ -3,9 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ProfileProvider } from '../context/ProfileContext'
 
-if (process.env.NODE_ENV === 'development') {
+/*if (process.env.NODE_ENV === 'development') {
   require('@/mocks/browser');
-}
+}*/
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

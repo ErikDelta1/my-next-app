@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useEffect } from 'react';
 import { useProfile } from '@/context/ProfileContext';
 import { useRouter } from 'next/navigation';
@@ -10,14 +9,13 @@ export default function Dashboard() {
   const { profile, setProfile } = useProfile();
   const router = useRouter();
 
-  useEffect(() => {
+  /*useEffect(() => {
     const fetchProfile = async () => {
       try {
         const res = await fetch('/api/profile/');
         if (!res.ok) throw new Error('Failed to fetch profile');
 
         const data = await res.json();
-        console.log(data);
 
         setProfile(data);
       } catch (err) {
@@ -28,7 +26,7 @@ export default function Dashboard() {
     if (!profile) {
       fetchProfile();
     }
-  }, [profile, setProfile]);
+  }, [profile, setProfile]);*/
 
   if (!profile) {
     router.push('/');
