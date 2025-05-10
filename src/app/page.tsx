@@ -1,25 +1,11 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useProfile } from '@/context/ProfileContext';
 
 export default function Home() {
-  const { profile } = useProfile();
-  const router = useRouter();
-
   return (
     <div className="relative min-h-screen p-8 pb-20 grid grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      
-      {profile && (
-        <button
-          className="absolute top-8 right-8 bg-blue-600 text-white rounded-lg px-6 py-2 hover:bg-blue-700 transition"
-          onClick={() => router.push('/dashboard')}
-        >
-          Show Profile
-        </button>
-      )}
 
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
@@ -68,13 +54,6 @@ export default function Home() {
           >
             Read our docs
           </a>
-
-          <Link
-            href="/form"
-            className="rounded-full border border-solid border-blue-500 text-blue-500 hover:bg-blue-100 transition-colors flex items-center justify-center font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-          >
-            Go to form
-          </Link>
         </div>
       </main>
 
