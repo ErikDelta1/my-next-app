@@ -22,13 +22,13 @@ export default function CarCard({ car }: CarCardProps) {
         {car.make} {car.model} ({car.year})
       </h2>
       <ul className="list-disc list-inside">
-        <li>Palivo: {car.fuel_type}</li>
-        <li>Převodovka: {car.transmission}</li>
-        <li>Pohon: {car.drive}</li>
-        <li>Počet válců: {car.cylinders}</li>
-        <li>Výkon: {car.horsepower} HP</li>
-        <li>Spotřeba město: {car.city_mpg} MPG</li>
-        <li>Spotřeba dálnice: {car.highway_mpg} MPG</li>
+        <li>Fuel: {car.fuel_type}</li>
+        <li>Transmission: {car.transmission}</li>
+        <li>Drive: {car.drive}</li>
+        <li>Cylinders: {car.cylinders}</li>
+        <li>Horsepower: {car.horsepower} HP</li>
+        <li>City MPG: {car.city_mpg} MPG</li>
+        <li>Highway MPG: {car.highway_mpg} MPG</li>
       </ul>
     </div>
   );
